@@ -26,7 +26,9 @@ margin: auto;`;
 
 export const Item = styled.div`
   color: #fff;
+  margin: auto;
   margin-bottom: 10px;
+  width: 100%;
   max-width: 670px;
 
   &:first-of-type {

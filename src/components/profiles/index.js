@@ -21,7 +21,7 @@ Profiles.Picture = function ProfilesPicture({ src, ...restProps }) {
   return (
     <Picture
       {...restProps}
-      src={src ? `/images/users/${src}` : `/images/misc/loading`}
+      src={src ? `/images/users/${src}` : `/images/misc/loading.gif`}
     />
   );
 };

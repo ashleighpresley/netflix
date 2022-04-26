@@ -12,6 +12,7 @@ import {
   Logo,
   Text,
   Picture,
+  PlayButton,
   Profile,
   Search,
   SearchIcon,
@@ -55,6 +56,10 @@ Header.Logo = function HeaderLogo({ to, ...restProps }) {
 
 Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
   return <ButtonLink {...restProps}>{children}</ButtonLink>;
+};
+
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 
 Header.Search = function HeaderSearch({

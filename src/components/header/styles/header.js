@@ -102,11 +102,7 @@ export const Link = styled.p`
   text-decoration: none;
   cursor: pointer;
   margin-right: 30px;
-  font-weight: ${({ active }) => (active ? "bold" : "normal")};
-
-  &:hover {
-    font-weight: bold;
-  }
+  font-weight: ${({ active }) => (active === "true" ? "700" : "normal")};
 
   &:last-of-type {
     margin-right: 0;

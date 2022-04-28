@@ -49,7 +49,19 @@ export default function App() {
             </IsUserRedirect>
           }
         ></Route>
-        <Route exact path={ROUTES.BROWSE} element={<Browse />}></Route>
+        <Route
+          exact
+          path={ROUTES.BROWSE}
+          element={
+            <ProtectedRoute
+              user={user}
+              loggedInPath={ROUTES.BROWSE}
+              path={ROUTES.HOME}
+            >
+              <SignUp />
+            </ProtectedRoute>
+          }
+        ></Route>
       </Routes>
     </Router>
   );

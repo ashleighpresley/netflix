@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import { Browse } from "../pages";
 
 export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
   return (
@@ -13,10 +12,20 @@ export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
   );
 }
 
-export function ProtectedRoute({ user, children, ...rest }) {
+export function ProtectedRoute({
+  user,
+  protectedPage,
+  loggedOutPath,
+  ...rest
+}) {
   return (
     <Routes>
-      <Route {...rest} element={user ? <Browse /> : children}></Route>
+      <Route
+        {...rest}
+        element={
+          user ? protectedPage : <Navigate to={{ pathname: loggedOutPath }} />
+        }
+      ></Route>
     </Routes>
   );
 }

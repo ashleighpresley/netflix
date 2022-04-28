@@ -55,11 +55,10 @@ export default function App() {
           element={
             <ProtectedRoute
               user={user}
-              loggedInPath={ROUTES.BROWSE}
+              protectedPage={<Browse />}
+              loggedOutPath={ROUTES.SIGN_UP}
               path={ROUTES.HOME}
-            >
-              <SignUp />
-            </ProtectedRoute>
+            ></ProtectedRoute>
           }
         ></Route>
       </Routes>

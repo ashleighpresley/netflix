@@ -56,7 +56,7 @@ export default function App() {
             <ProtectedRoute
               user={user}
               protectedPage={<Browse />}
-              loggedOutPath={ROUTES.SIGN_UP}
+              loggedOutPath={ROUTES.SIGN_IN}
               path={ROUTES.HOME}
             ></ProtectedRoute>
           }

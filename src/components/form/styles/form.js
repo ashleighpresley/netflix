@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 660px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
@@ -34,7 +34,7 @@ export const Base = styled.form`
 
 export const Title = styled.h1`
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 28px;

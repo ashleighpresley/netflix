@@ -10,10 +10,46 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path={ROUTES.HOME} element={<Home />}></Route>
+        <Route
+          exact
+          path={ROUTES.HOME}
+          element={
+            <IsUserRedirect
+              user={user}
+              loggedInPath={ROUTES.BROWSE}
+              path={ROUTES.HOME}
+            >
+              <Home />
+            </IsUserRedirect>
+          }
+        ></Route>
+        <Route
+          exact
+          path={ROUTES.SIGN_IN}
+          element={
+            <IsUserRedirect
+              user={user}
+              loggedInPath={ROUTES.BROWSE}
+              path={ROUTES.HOME}
+            >
+              <SignIn />
+            </IsUserRedirect>
+          }
+        ></Route>
+        <Route
+          exact
+          path={ROUTES.SIGN_UP}
+          element={
+            <IsUserRedirect
+              user={user}
+              loggedInPath={ROUTES.BROWSE}
+              path={ROUTES.HOME}
+            >
+              <SignUp />
+            </IsUserRedirect>
+          }
+        ></Route>
         <Route exact path={ROUTES.BROWSE} element={<Browse />}></Route>
-        <Route exact path={ROUTES.SIGN_IN} element={<SignIn />}></Route>
-        <Route exact path={ROUTES.SIGN_UP} element={<SignUp />}></Route>
       </Routes>
     </Router>
   );

@@ -1,24 +1,12 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 
-export function IsUserRedirect({
-  user,
-  loggedInPath,
-  children,
-  element,
-  ...rest
-}) {
+export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
   return (
     <Routes>
       <Route
         {...rest}
-        element={element}
-        render={() => {
-          if (user) {
-            return <Navigate to={{ pathname: loggedInPath }} />;
-          }
-          return children;
-        }}
+        element={user ? <Navigate to={{ pathname: loggedInPath }} /> : children}
       ></Route>
     </Routes>
   );

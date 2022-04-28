@@ -5,6 +5,7 @@ import { Card, Header, Loading, Player } from "../components";
 import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 import { FooterContainer } from "./footer";
+import { useNavigate } from "react-router-dom";
 
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState("series");
@@ -14,6 +15,7 @@ export function BrowseContainer({ slides }) {
   const [slideRows, setSlideRows] = useState([]);
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -58,7 +60,16 @@ export function BrowseContainer({ slides }) {
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
-                  <Header.TextLink onClick={() => firebase.auth().signOut()}>
+                  <Header.TextLink
+                    onClick={() =>
+                      firebase
+                        .auth()
+                        .signOut()
+                        .then(() => {
+                          navigate(ROUTES.HOME);
+                        })
+                    }
+                  >
                     Sign out
                   </Header.TextLink>
                 </Header.Group>

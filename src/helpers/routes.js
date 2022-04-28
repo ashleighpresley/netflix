@@ -1,17 +1,26 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
-export function IsUserRedirect({ user, loggedInPath, children, ...rest }) {
+export function IsUserRedirect({
+  user,
+  loggedInPath,
+  children,
+  element,
+  ...rest
+}) {
   return (
-    <Route
-      {...rest}
-      render={() => {
-        if (user) {
-          return <Redirect to={{ pathname: loggedInPath }} />;
-        }
-        return children;
-      }}
-    ></Route>
+    <Routes>
+      <Route
+        {...rest}
+        element={element}
+        render={() => {
+          if (user) {
+            return <Navigate to={{ pathname: loggedInPath }} />;
+          }
+          return children;
+        }}
+      ></Route>
+    </Routes>
   );
 }
 
@@ -24,7 +33,7 @@ export function ProtectedRoute({ user, children, ...rest }) {
           return children;
         }
         return (
-          <Redirect
+          <Navigate
             to={{
               pathname: "/signin",
               state: { from: location },

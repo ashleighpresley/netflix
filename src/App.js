@@ -61,6 +61,7 @@ export default function App() {
             ></ProtectedRoute>
           }
         ></Route>
+        <Route exact path="*" element={user ? <Browse /> : <Home />} />
       </Routes>
     </Router>
   );

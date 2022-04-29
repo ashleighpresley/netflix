@@ -21,6 +21,7 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "18",
     slug: "tiger-king",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -30,6 +31,7 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "amanda-knox",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -39,6 +41,7 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "citizenfour",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -48,6 +51,7 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "super-size-me",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -57,6 +61,7 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "man-on-wire",
+    video: "/videos/bunny.mp4",
   });
 
   // Comedies
@@ -68,6 +73,7 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "the-office",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -77,6 +83,7 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "arrested-development",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -86,6 +93,7 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "curb-your-enthusiasm",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -95,6 +103,7 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "family-guy",
+    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -104,6 +113,7 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "south-park",
+    video: "/videos/bunny.mp4",
   });
 
   // Children

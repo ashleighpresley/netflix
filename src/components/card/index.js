@@ -10,6 +10,7 @@ import {
   FeatureTitle,
   FeatureText,
   FeatureClose,
+  FeatureFavorite,
   Maturity,
   Content,
   Meta,
@@ -58,6 +59,10 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
               itemFeature.genre.slice(1)}
           </FeatureText>
         </Group>
+
+        <FeatureFavorite onClick={() => setShowFeature(false)}>
+          <img src="/images/icons/favorite.png" alt="Favorite" />
+        </FeatureFavorite>
 
         {children}
         <Player>

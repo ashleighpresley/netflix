@@ -48,7 +48,14 @@ export function BrowseContainer({ slides }) {
     } else {
       setSlideRows(slides[category]);
     }
-  }, [searchTerm]);
+  }, [
+    category,
+    searchSlides.films,
+    searchSlides.series,
+    searchTerm,
+    slideRows,
+    slides,
+  ]);
 
   return profile.displayName ? (
     <>

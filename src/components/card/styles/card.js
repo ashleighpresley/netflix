@@ -150,7 +150,7 @@ export const FeatureTitle = styled(Title)`
 `;
 
 export const FeatureClose = styled.button`
-  color: white;
+  color: #fff;
   position: absolute;
   right: 20px;
   top: 20px;
@@ -160,6 +160,18 @@ export const FeatureClose = styled.button`
   img {
     filter: brightness(0) invert(1);
     width: 24px;
+  }
+`;
+export const FeatureFavorite = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  img {
+    filter: brightness(0) invert(1);
+    width: 24px;
+  }
+  img:hover {
+    filter: contrast(1000%) invert(100%) sepia(100%) saturate(10000%);
   }
 `;
 

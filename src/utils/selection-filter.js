@@ -2,6 +2,10 @@ export default function selectionFilter({ series, films }) {
   return {
     series: [
       {
+        title: "My Favorites",
+        data: series.filter((item) => item.favorited),
+      },
+      {
         title: "Documentaries",
         data: series.filter((item) => item.genre === "documentaries"),
       },
@@ -23,6 +27,10 @@ export default function selectionFilter({ series, films }) {
       },
     ],
     films: [
+      {
+        title: "My Favorites",
+        data: films.filter((item) => item.favorited),
+      },
       {
         title: "Drama",
         data: films.filter((item) => item.genre === "drama"),

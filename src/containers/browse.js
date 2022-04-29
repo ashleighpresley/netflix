@@ -7,6 +7,8 @@ import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 import { FooterContainer } from "./footer";
 import { useNavigate } from "react-router-dom";
+import { useContent } from "../hooks";
+import searchFilter from "../utils/search-filter";
 
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState("series");
@@ -17,6 +19,9 @@ export function BrowseContainer({ slides }) {
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
   const navigate = useNavigate();
+  const { series } = useContent("series");
+  const { films } = useContent("films");
+  const searchSlides = searchFilter({ series, films, searchTerm });
 
   useEffect(() => {
     setTimeout(() => {
@@ -34,8 +39,12 @@ export function BrowseContainer({ slides }) {
     });
     const results = fuse.search(searchTerm).map(({ item }) => item);
 
-    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
-      setSlideRows(results);
+    if (slideRows.length > 0 && results.length > 0) {
+      if (category === "series") {
+        setSlideRows(searchSlides.series);
+      } else {
+        setSlideRows(searchSlides.films);
+      }
     } else {
       setSlideRows(slides[category]);
     }

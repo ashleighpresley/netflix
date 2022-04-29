@@ -3,13 +3,21 @@ export default function searchFilter({ series, films, searchTerm }) {
     series: [
       {
         title: "Search Results",
-        data: series.filter((item) => item.title.includes(searchTerm)),
+        data: series.filter(
+          (item) =>
+            item.title.includes(searchTerm) ||
+            item.description.includes(searchTerm)
+        ),
       },
     ],
     films: [
       {
         title: "Search Results",
-        data: films.filter((item) => item.title.includes(searchTerm)),
+        data: films.filter(
+          (item) =>
+            item.title.includes(searchTerm) ||
+            item.description.includes(searchTerm)
+        ),
       },
     ],
   };

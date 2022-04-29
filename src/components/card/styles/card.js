@@ -12,7 +12,6 @@ export const Title = styled.p`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
   > ${Title} {
     @media (max-width: 1000px) {
       margin-left: 30px;
@@ -57,8 +56,21 @@ export const Text = styled.p`
 `;
 
 export const Entities = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-auto-columns: 20%;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  @media (min-width: 1000px) {
+    padding: 30px;
+  }
+  margin: 0 30px;
 `;
 
 export const Meta = styled.div`
@@ -94,18 +106,6 @@ export const Item = styled.div`
     &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
       display: block;
       z-index: 100;
-    }
-  }
-  &:first-of-type {
-    margin-left: 56px;
-    @media (max-width: 1000px) {
-      margin-left: 30px;
-    }
-  }
-  &:last-of-type {
-    margin-right: 56px;
-    @media (max-width: 1000px) {
-      margin-right: 30px;
     }
   }
 `;

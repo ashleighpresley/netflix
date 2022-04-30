@@ -162,18 +162,6 @@ export const FeatureClose = styled.button`
     width: 24px;
   }
 `;
-export const FeatureFavorite = styled.button`
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  img {
-    filter: brightness(0) invert(1);
-    width: 24px;
-  }
-  img:hover {
-    filter: contrast(1000%) invert(100%) sepia(100%) saturate(10000%);
-  }
-`;
 
 export const Content = styled.div`
   margin: 56px;

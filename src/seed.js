@@ -21,7 +21,6 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "18",
     slug: "tiger-king",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -31,7 +30,6 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "amanda-knox",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -41,7 +39,6 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "citizenfour",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -51,7 +48,6 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "super-size-me",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -61,7 +57,15 @@ export function seedDatabase(firebase) {
     genre: "documentaries",
     maturity: "12",
     slug: "man-on-wire",
-    video: "/videos/bunny.mp4",
+  });
+  firebase.firestore().collection("series").add({
+    id: getUUID(),
+    title: "Cheer",
+    description:
+      "In the small town of Corsicana, Texas, hard-driving head cheer coach Monica Aldama demands perfection from her team of competitive college athletes.",
+    genre: "documentaries",
+    maturity: "12",
+    slug: "cheer",
   });
 
   // Comedies
@@ -73,7 +77,6 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "the-office",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -83,7 +86,6 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "arrested-development",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -93,7 +95,6 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "curb-your-enthusiasm",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -103,7 +104,6 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "family-guy",
-    video: "/videos/bunny.mp4",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
@@ -113,7 +113,15 @@ export function seedDatabase(firebase) {
     genre: "comedies",
     maturity: "15",
     slug: "south-park",
-    video: "/videos/bunny.mp4",
+  });
+  firebase.firestore().collection("series").add({
+    id: getUUID(),
+    title: "Parks and Recreation",
+    description:
+      "Four young, schoolgoing boys, Stan Marsh, Kyle Broflovski, Eric Cartman and Kenny McCormick, who live in South Park set out on various adventures.",
+    genre: "comedies",
+    maturity: "15",
+    slug: "parks-and-recreation",
   });
 
   // Children
@@ -162,6 +170,15 @@ export function seedDatabase(firebase) {
     maturity: "0",
     slug: "spongebob",
   });
+  firebase.firestore().collection("series").add({
+    id: getUUID(),
+    title: "Mickey Mouse Clubhouse",
+    description:
+      "Mickey, Minnie, Pluto, Goofy, Daisy and Donald all hang around the Clubhouse. Mickey leads viewers through stories with play-along and singalong segments. ",
+    genre: "children",
+    maturity: "0",
+    slug: "mickey-mouse-clubhouse",
+  });
 
   // Crime
   firebase.firestore().collection("series").add({
@@ -209,6 +226,15 @@ export function seedDatabase(firebase) {
     maturity: "18",
     slug: "the-staircase",
   });
+  firebase.firestore().collection("series").add({
+    id: getUUID(),
+    title: "Evil Genius",
+    description:
+      "This baffling true crime story starts with the grisly death of a pizza man who robs a bank with a bomb around his neck -- and gets weirder from there.",
+    genre: "crime",
+    maturity: "12",
+    slug: "evil-genius",
+  });
 
   // Feel-good
   firebase.firestore().collection("series").add({
@@ -255,6 +281,15 @@ export function seedDatabase(firebase) {
     genre: "feel-good",
     maturity: "12",
     slug: "school-of-rock",
+  });
+  firebase.firestore().collection("series").add({
+    id: getUUID(),
+    title: "Gilmore Girls",
+    description:
+      "DA dramedy centering around the relationship between a thirtysomething single mother and her teen daughter living in Stars Hollow, Connecticut.",
+    genre: "feel-good",
+    maturity: "12",
+    slug: "gilmore-girls",
   });
 
   /* Films
@@ -305,6 +340,15 @@ export function seedDatabase(firebase) {
     maturity: "12",
     slug: "the-social-network",
   });
+  firebase.firestore().collection("films").add({
+    id: getUUID(),
+    title: "21",
+    description:
+      "A brilliant group of students become card-counting experts with the intent of swindling millions out of Las Vegas casinos by playing blackjack.",
+    genre: "drama",
+    maturity: "12",
+    slug: "21",
+  });
 
   // Suspense
   firebase.firestore().collection("films").add({
@@ -351,6 +395,15 @@ export function seedDatabase(firebase) {
     genre: "suspense",
     maturity: "15",
     slug: "zodiac",
+  });
+  firebase.firestore().collection("films").add({
+    id: getUUID(),
+    title: "Parasite",
+    description:
+      "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    genre: "suspense",
+    maturity: "15",
+    slug: "parasite",
   });
 
   // Children
@@ -399,6 +452,15 @@ export function seedDatabase(firebase) {
     maturity: "0",
     slug: "up",
   });
+  firebase.firestore().collection("films").add({
+    id: getUUID(),
+    title: "Encanto",
+    description:
+      "A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.",
+    genre: "children",
+    maturity: "0",
+    slug: "encanto",
+  });
 
   // Thriller
   firebase.firestore().collection("films").add({
@@ -446,6 +508,15 @@ export function seedDatabase(firebase) {
     maturity: "15",
     slug: "the-silence-of-the-lambs",
   });
+  firebase.firestore().collection("films").add({
+    id: getUUID(),
+    title: "Searching",
+    description:
+      "After his teenage daughter goes missing, a desperate father tries to find clues on her laptop.",
+    genre: "thriller",
+    maturity: "15",
+    slug: "searching",
+  });
 
   // Romance
   firebase.firestore().collection("films").add({
@@ -492,5 +563,14 @@ export function seedDatabase(firebase) {
     genre: "romance",
     maturity: "15",
     slug: "titanic",
+  });
+  firebase.firestore().collection("films").add({
+    id: getUUID(),
+    title: "A Walk to Remember",
+    description:
+      "Two North Carolina teens, Landon Carter and Jamie Sullivan, are thrown together after Landon gets into trouble and is sentenced to perform community service.",
+    genre: "romance",
+    maturity: "15",
+    slug: "a-walk-to-remember",
   });
 }

@@ -10,7 +10,6 @@ import {
   FeatureTitle,
   FeatureText,
   FeatureClose,
-  FeatureFavorite,
   Maturity,
   Content,
   Meta,
@@ -60,14 +59,12 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
           </FeatureText>
         </Group>
 
-        <FeatureFavorite onClick={() => setShowFeature(false)}>
-          <img src="/images/icons/favorite.png" alt="Favorite" />
-        </FeatureFavorite>
-
         {children}
         <Player>
           <Player.Button />
-          <Player.Video src={itemFeature.video} />
+          <Player.Video
+            src={`/videos/${itemFeature.genre}/${itemFeature.slug}.mp4`}
+          />
         </Player>
       </Content>
     </Feature>

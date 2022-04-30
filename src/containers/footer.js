@@ -14,7 +14,7 @@ export function FooterContainer() {
         <Footer.Link href="#">Corporate Information</Footer.Link>
       </Footer.Row>
       <Footer.Break />
-      <Footer.Text>Presley+ United States</Footer.Text>
+      <Footer.Text>Netflix United States</Footer.Text>
     </Footer>
   );
 }

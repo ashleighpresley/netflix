@@ -119,7 +119,7 @@ export function BrowseContainer({ slides }) {
           </Header.Text>
           <Player>
             <Player.Button />
-            <Player.Video src="/videos/bunny.mp4" />
+            <Player.Video src="/videos/films/thriller/joker.mp4" />
           </Player>
         </Header.Feature>
       </Header>

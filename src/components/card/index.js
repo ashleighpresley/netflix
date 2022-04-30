@@ -63,7 +63,7 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
         <Player>
           <Player.Button />
           <Player.Video
-            src={`/videos/${itemFeature.genre}/${itemFeature.slug}.mp4`}
+            src={`/videos/${category}/${itemFeature.genre}/${itemFeature.slug}.mp4`}
           />
         </Player>
       </Content>

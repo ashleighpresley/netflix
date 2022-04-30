@@ -239,48 +239,48 @@ export function seedDatabase(firebase) {
   // Feel-good
   firebase.firestore().collection("series").add({
     id: getUUID(),
-    title: "Good Will Hunting",
+    title: "The Golden Girls",
     description:
-      "Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.",
+      "Four previously married women live together in Miami, sharing their various experiences together and enjoying themselves despite hard times.",
     genre: "feel-good",
     maturity: "12",
-    slug: "good-will-hunting",
+    slug: "golden-girls",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
-    title: "Forrest Gump",
+    title: "This Is Us",
     description:
-      "Forrest Gump, a man with a low IQ, joins the army for service where he meets Dan and Bubba. However, he cannot stop thinking about his childhood sweetheart Jenny Curran, whose life is messed up.",
+      "This grounded, life-affirming dramedy reveals how the tiniest events in our lives impact who we become, and how the connections we share with each other can transcend time, distance and even death.",
     genre: "feel-good",
     maturity: "12",
-    slug: "forrest-gump",
+    slug: "this-is-us",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
-    title: "Juno",
+    title: "Parenthood",
     description:
-      "Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her baby's adoptive parents than she expected.",
+      "Parenthood follows the trials and tribulations of the very large, colorful and imperfect Braverman family.",
     genre: "feel-good",
     maturity: "12",
-    slug: "juno",
+    slug: "parenthood",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
-    title: "Midnight In Paris",
+    title: "Hart of Dixie",
     description:
-      "Gil arrives with his fiancee and her family in Paris for a vacation, even as he tries to finish his debut novel. He is beguiled by the city, which takes him to a time past, away from his fiancee.",
+      "New Yorker and new doctor Zoe Hart accepts an offer from a stranger, Dr. Harley Wilkes, to work in his medical practice in Bluebell, Alabama.",
     genre: "feel-good",
     maturity: "12",
-    slug: "midnight-in-paris",
+    slug: "hart-of-dixie",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
-    title: "School of Rock",
+    title: "Sweet Magnolias",
     description:
-      "Dewey Finn, an amateur rock enthusiast, slyly takes up his friend's substitute teacher's job. Bearing no qualifications for it, he instead starts training the students to form a band.",
+      "Lifelong friends lift each other up as they juggle relationships, family and careers in the small Southern town of Serenity.",
     genre: "feel-good",
     maturity: "12",
-    slug: "school-of-rock",
+    slug: "sweet-magnolias",
   });
   firebase.firestore().collection("series").add({
     id: getUUID(),
